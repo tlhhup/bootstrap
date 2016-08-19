@@ -22,7 +22,7 @@ public class UserController {
 	public String index(Model model){
 		List<User> users = userService.findEntity(null);
 		model.addAttribute("users", users);
-		return "user/userList";
+		return "sys/user/userList";
 	}
 	
 }

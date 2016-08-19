@@ -20,14 +20,17 @@ public class User extends BaseEntity {
 	@Column(name = "password")
 	private String password;
 
-	@Column(name="age")
+	@Column(name = "age")
 	private int age;
-	
-	@Column(name="sex")
+
+	@Column(name = "sex")
 	private String sex;
-	
-	@Column(name="createTime")
+
+	@Column(name = "createTime")
 	private Date createTime;
+
+	@Column(name = "realName")
+	private String realName;
 
 	public int getId() {
 		return id;
@@ -75,6 +78,14 @@ public class User extends BaseEntity {
 
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
+	}
+
+	public String getRealName() {
+		return realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
 	}
 
 }

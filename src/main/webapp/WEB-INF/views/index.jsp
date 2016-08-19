@@ -146,7 +146,7 @@
                             <a href="#"><i class="fa fa-laptop nav_icon"></i>用户管理<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="${ctx }/User/index.hl">用户管理</a>
+                                    <a href="${ctx }/User/index.hl" target="main">用户管理</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -217,7 +217,6 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-		<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
         <div id="page-wrapper">
         <div class="graphs">
      	<div class="col_3">
