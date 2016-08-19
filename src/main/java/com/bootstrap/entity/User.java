@@ -1,22 +1,33 @@
 package com.bootstrap.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name="users")
+@Table(name = "users")
 public class User extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	private int id;
-	
-	@Column(name="userName")
+
+	@Column(name = "userName")
 	private String userName;
-	
-	@Column(name="password")
+
+	@Column(name = "password")
 	private String password;
+
+	@Column(name="age")
+	private int age;
+	
+	@Column(name="sex")
+	private String sex;
+	
+	@Column(name="createTime")
+	private Date createTime;
 
 	public int getId() {
 		return id;
@@ -40,6 +51,30 @@ public class User extends BaseEntity {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
 	}
 
 }

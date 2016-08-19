@@ -1,81 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="ctx" value="${pageContext.request.contextPath }"/>
-<!DOCTYPE html>
+<%@ include file="/WEB-INF/views/tags.jsp"%>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>用户登录</title>
-<link href="${ctx }/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<script src="${ctx }/resources/js/jquery-3.1.0.min.js" type="application/javascript"></script>
-<script src="${ctx }/resources/bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
-<style type="text/css">
-html, body, table {
-	background-color: #f5f5f5;
-	width: 100%;
-	text-align: center;
-}
-
-.form-signin {
-	position: relative;
-	text-align: left;
-	width: 450px;
-	padding: 25px 29px 29px;
-	margin: 0 auto 20px;
-	background-color: #fff;
-	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-}
-
-.form-signin .input-label {
-	font-size: 16px;
-	line-height: 35px;
-	color: #999;
-}
-
-.form-signin .input-block-level {
-	font-size: 16px;
-	height: auto;
-	margin-bottom: 15px;
-	padding: 7px;
-	*width: 283px;
-	*padding-bottom: 0;
-	_padding: 7px 7px 9px 7px;
-}
-
-.form-signin .btn.btn-large {
-	font-size: 16px;
-}
-
-.form-signin div.validateCode {
-	padding-bottom: 15px;
-}
-</style>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+	 addEventListener("load", function() { 
+		 setTimeout(hideURLbar, 0); 
+		 }, false); 
+	 function hideURLbar(){
+		 window.scrollTo(0,1); } 
+</script>
+<!-- Bootstrap Core CSS -->
+<link href="${ctx }/resources/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+<script src="${ctx }/resources/js/jquery-3.1.0.min.js"
+	type="application/javascript"></script>
+<script src="${ctx }/resources/bootstrap/js/bootstrap.min.js"
+	type="application/javascript"></script>
+<link href="${ctx }/resources/css/style.css" rel='stylesheet' type='text/css' />
+<link href="${ctx }/resources/css/font-awesome.css" rel="stylesheet">
+<link href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900'
+	rel='stylesheet' type='text/css'>
 </head>
-<body>
-	<form id="loginForm" class="form-signin" action="" method="post">
-		<div class="form-group">
-			<label class="input-label col-sm-3 control-label" for="username">登录名</label>
-			<div class="col-sm-8">
-				<input type="text" id="username" name="userName" class="input-block-level required"> 
+<body id="login">
+	<div class="login-logo">
+		<img src="${ctx }/resources/images/logo.png" alt="" />
+	</div>
+	<h2 class="form-heading">平台后台登陆</h2>
+	<div class="app-cam">
+		<form action="${ctx }/Login/login.hl" method="post">
+			<input type="text" class="text" placeholder="userName" name="userName"/>
+			<input type="password" placeholder="password" name="password"/>
+			<div class="submit">
+				<input type="submit" value="Login">
 			</div>
-		</div>
-		<div class="form-group">
-			<label class="input-label col-sm-3 control-label" for="password">密码</label>
-			<div class="col-sm-8">
-				<input type="password" id="password" name="password" class="input-block-level required">
-			</div>
-		</div>
-		<div class="form-group" align="center">
-			<input class="btn btn-large btn-primary" type="submit" value="登 录" />&nbsp;&nbsp;
-			<input type="reset" class="btn btn-large btn-primary" value="重置">
-		</div>
-	</form>
+			<ul class="new">
+				<li class="new_left"><p>
+						<a href="#">Forgot Password ?</a>
+					</p></li>
+				<li class="new_right"><p class="sign">
+						New here ?<a href="register.html"> Sign Up</a>
+					</p></li>
+			</ul>
+		</form>
+	</div>
+	<div class="copy_layout login">
+		<p>
+			Copyright &copy; 2015.Company name All rights reserved.More Templates
+		</p>
+	</div>
 </body>
 </html>

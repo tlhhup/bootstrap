@@ -27,11 +27,16 @@ public class LoginController {
 		}
 		//将用户存到session中
 		session.setAttribute("user", temp);
-		return "main";
+		return "index";
 	}
 	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(){
+		return "login";
+	}
+	
+	@RequestMapping("/logout")
+	public String logout(HttpSession session){
 		return "login";
 	}
 	
