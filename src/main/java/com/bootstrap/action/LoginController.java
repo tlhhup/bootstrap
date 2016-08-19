@@ -27,6 +27,12 @@ public class LoginController {
 		}
 		//将用户存到session中
 		session.setAttribute("user", temp);
+		return "redirect:index.hl";
+	}
+	
+	@RequestMapping("/index")
+	public String main(Model model){
+		//TODO 后期处理菜单数据的显示
 		return "index";
 	}
 	

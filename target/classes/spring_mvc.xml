@@ -25,6 +25,7 @@
 	<!-- 拦截器 -->
 	<mvc:interceptors>
 	    <mvc:interceptor>
+	        <!-- 处理所有的请求 -->
 	        <mvc:mapping path="/**"/>
 	        <bean class="com.bootstrap.interceptor.RightFilterInterceptor"/>
 	    </mvc:interceptor>
