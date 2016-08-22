@@ -79,4 +79,9 @@
     <aop:config>
         <aop:advisor advice-ref="txAdvice" pointcut="execution(* *..*Service.*(..))"/>
     </aop:config>
+    
+    <!-- 配置缓存管理器 -->
+    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:cache/ehcache-local.xml"/>
+    </bean>
 </beans>
