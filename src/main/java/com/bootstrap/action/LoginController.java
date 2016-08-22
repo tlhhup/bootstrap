@@ -36,6 +36,12 @@ public class LoginController {
 		return "index";
 	}
 	
+	@RequestMapping("/dashboard")
+	public String dashboard(){
+		//TODO 获取通知信息
+		return "dashboard";
+	}
+	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(){
 		return "login";

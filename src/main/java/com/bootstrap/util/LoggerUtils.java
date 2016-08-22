@@ -9,6 +9,10 @@ public class LoggerUtils {
 	
 	private static Logger logger = LoggerFactory.getLogger(LoggerUtils.class);
 	private static Marker marker = MarkerFactory.getMarker("com.bootstrap");
+	
+	public static boolean isDebugEnabled(){
+		return logger.isDebugEnabled();
+	}
 
 	public static void d(String msg) {
 		logger.debug(marker, msg);

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/tags.jsp"%>
 <!DOCTYPE html>
 <html>
@@ -13,35 +13,37 @@
 <script src="${ctx }/resources/bootstrap/js/bootstrap.min.js"
 	type="application/javascript"></script>
 </head>
-<body>
-	<table class="table table-striped table-bordered">
-		<thead>
-			<tr>
-				<th>#</th>
-				<th>姓名</th>
-				<th>性别</th>
-				<th>年龄</th>
-				<th>创建日期</th>
-				<th>操作</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="user" items="${users }" varStatus="status">
+<body style="background: #f2f4f8;">
+	<div class="container-fluid">
+		<div>
+			<h2>用户列表</h2>
+		</div>
+		<table class="table table-striped table-bordered">
+			<thead>
 				<tr>
-					<td>${status.index }</td>
-					<td>${user.realName }</td>
-					<td>${user.sex }</td>
-					<td>${user.age }</td>
-					<td>
-						<fmt:formatDate value="${user.createTime }" pattern="yyyy-MM-dd"/>
-					</td>
-					<td>
-						<a class="btn" href="#">删除</a>
-						<a class="btn" href="#">修改</a>
-					</td>
+					<th>#</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>年龄</th>
+					<th>创建日期</th>
+					<th>操作</th>
 				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				<c:forEach var="user" items="${users }" varStatus="status">
+					<tr>
+						<td>${status.index+1 }</td>
+						<td>${user.realName }</td>
+						<td>${user.sex }</td>
+						<td>${user.age }</td>
+						<td><fmt:formatDate value="${user.createTime }"
+								pattern="yyyy-MM-dd" /></td>
+						<td><a class="btn" href="#">删除</a> <a class="btn" href="#">修改</a>
+						</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>

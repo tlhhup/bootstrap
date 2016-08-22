@@ -8,11 +8,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
-	 addEventListener("load", function() { 
-		 setTimeout(hideURLbar, 0); 
-		 }, false); 
-	 function hideURLbar(){
-		 window.scrollTo(0,1); } 
+	addEventListener("load", function() {
+		setTimeout(hideURLbar, 0);
+	}, false);
+	function hideURLbar() {
+		window.scrollTo(0, 1);
+	}
+	
+	//处理iframe页面跳转问题
+	var ttop=window.top.location.href;
+	var current=window.location.href;
+	if(ttop!=current){
+		top.location.href='${ctx }/User/login.hl';
+	}
 </script>
 <!-- Bootstrap Core CSS -->
 <link href="${ctx }/resources/bootstrap/css/bootstrap.min.css"
