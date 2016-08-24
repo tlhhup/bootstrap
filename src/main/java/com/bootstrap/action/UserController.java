@@ -19,7 +19,7 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping("/index")
-	public String index(Model model){
+	public String index(User user,Model model){
 		List<User> users = userService.findEntity(null);
 		model.addAttribute("users", users);
 		return "sys/user/userList";
